@@ -28,7 +28,7 @@ section div > h3 {
 }
     </style>
 
-  
+
   </head>
   <body>
     <div class="container">
@@ -87,7 +87,30 @@ section div > h3 {
           </div>
         </div>
       </section>
-      {{/work.length}} 
+      {{/work.length}}
+
+      {{#freelance.length}}
+      <section class="row">
+        <header class="col-md-3">
+          <h3>Freelance</h3>
+        </header>
+        <div class="col-md-9">
+          <div class="skills">
+            {{#freelance}}
+            <h3>{{company}}</h3>
+            <strong>{{position}}</strong>
+            <p>{{startDateYear}} - {{endDateYear}}</p>
+            <p>{{summary}}</p>
+            <ul>
+              {{#highlights}}
+              <li>{{.}}</li>
+              {{/highlights}}
+            </ul>
+            <hr />{{/freelance}}
+          </div>
+        </div>
+      </section>
+      {{/freelance.length}}
 
       {{#education.length}}
       <section class="row">
@@ -111,7 +134,7 @@ section div > h3 {
           </div>
         </div>
       </section>
-      {{/education.length}} 
+      {{/education.length}}
       {{#skills.length}}
       <section class="row">
         <header class="col-md-3">
