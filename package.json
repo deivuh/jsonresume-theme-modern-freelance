@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-modern-freelance",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "Default modern theme with additional sections including freelance work",
   "main": "index.js",
   "scripts": {
@@ -25,5 +25,11 @@
   "bugs": {
     "url": "https://github.com/deivuh/jsonresume-theme-modernwithfreelance/issues"
   },
-  "homepage": "https://github.com/deivuh/jsonresume-theme-modernwithfreelance"
+  "homepage": "https://github.com/deivuh/jsonresume-theme-modernwithfreelance",
+  "dependencies": {
+    "gravatar": "^1.0.6",
+    "lodash": "^2.4.1",
+    "mustache": "^0.8.2",
+    "tarball-extract": "0.0.3"
+  }
 }

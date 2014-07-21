@@ -105,7 +105,31 @@
           </div>
         </div>
       </section>
-      {{/freelance.length}} 
+      {{/freelance.length}}
+
+
+<!-- From https://github.com/joelewis -->
+      {{#personalProjects.length}}
+      <section class="row">
+        <header class="col-md-3">
+          <h3>Personal Projects</h3>
+        </header>
+        <div class="col-md-9">
+          <div class="skills">
+            {{#personalProjects}}
+            <h3>{{title}}</h3>
+            <p>{{description}}</p>
+            <ul>
+              {{#highlights}}
+              <li>{{.}}</li>
+              {{/highlights}}
+            </ul>
+            <p><a href="{{website}}">website</p>
+            <hr />{{/personalProjects}}
+          </div>
+        </div>
+      </section>
+      {{/personalProjects.length}}
 
       {{#education.length}}
       <section class="row">
