@@ -9,11 +9,26 @@ function render(resumeObject) {
 	_.each(resumeObject.work, function(w){
 		w.startDateYear = w.startDate.substr(0,4);
 		if(w.endDate) {
-			w.endDateYear = w.endDate.substr(0,4);
+			w.endDateYear = '- ' + w.endDate.substr(0,4);
 		} else {
-			w.endDateYear = 'Present'
+			w.endDateYear = '- Present'
+		}
+
+		if(w.startDateYear == w.endDateYear) {
+			w.endDateYear = ''
+		}
+
+	});
+
+	_.each(resumeObject.freelance, function(f){
+		f.startDateYear = f.startDate.substr(0,4);
+		if(f.endDate) {
+			f.endDateYear = '- ' + f.endDate.substr(0,4);
+		} else {
+			f.endDateYear = '';
 		}
 	});
+
 	_.each(resumeObject.education, function(e){
     if( !e.area || !e.studyType ){
       e.educationDetail = (e.area == null ? '' : e.area) + (e.studyType == null ? '' : e.studyType);
@@ -26,6 +41,8 @@ function render(resumeObject) {
 		}  else {
 			e.endDateYear = 'Present'
 		}
+
+
 	});
 	if(resumeObject.bio && resumeObject.bio.email && resumeObject.bio.email.personal) {
 		resumeObject.bio.gravatar = gravatar.url(resumeObject.bio.email.personal, {

@@ -71,7 +71,7 @@
             {{#work}}
             <h3>{{company}}</h3>
             <strong>{{position}}</strong>
-            <p>{{startDateYear}} - {{endDateYear}}</p>
+            <p>{{startDateYear}} {{endDateYear}}</p>
             <p>{{summary}}</p>
             <ul>
               {{#highlights}}
@@ -87,14 +87,14 @@
       {{#freelance.length}}
       <section class="row">
         <header class="col-md-3">
-          <h3>Freelance work</h3>
+          <h3>Freelance Work Projects</h3>
         </header>
         <div class="col-md-9">
           <div class="skills">
             {{#freelance}}
             <h3>{{company}}</h3>
             <strong>{{position}}</strong>
-            <p>{{startDateYear}} - {{endDateYear}}</p>
+            <p>{{startDateYear}} {{endDateYear}}</p>
             <p>{{summary}}</p>
             <ul>
               {{#highlights}}
