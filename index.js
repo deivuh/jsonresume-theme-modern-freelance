@@ -9,24 +9,41 @@ function render(resumeObject) {
 	_.each(resumeObject.work, function(w){
 		w.startDateYear = w.startDate.substr(0,4);
 		if(w.endDate) {
-			w.endDateYear = '- ' + w.endDate.substr(0,4);
+
+			w.endDateYear = w.endDate.substr(0,4);
+
+			if(w.startDateYear == w.endDateYear) {
+				w.endDateYear = ''
+			} else {
+				w.endDateYear = '- ' + w.endDate.substr(0,4);
+			}
+
 		} else {
 			w.endDateYear = '- Present'
 		}
 
-		if(w.startDateYear == w.endDateYear) {
-			w.endDateYear = ''
-		}
+
 
 	});
 
 	_.each(resumeObject.freelance, function(f){
 		f.startDateYear = f.startDate.substr(0,4);
 		if(f.endDate) {
-			f.endDateYear = '- ' + f.endDate.substr(0,4);
+
+			f.endDateYear = f.endDate.substr(0,4);
+
+			if(f.startDateYear == f.endDateYear) {
+				f.endDateYear = ''
+			} else {
+				f.endDateYear = '- ' + f.endDate.substr(0,4);
+			}
+
 		} else {
-			f.endDateYear = '';
+			f.endDateYear = '- Present';
 		}
+
+
+
 	});
 
 	_.each(resumeObject.education, function(e){

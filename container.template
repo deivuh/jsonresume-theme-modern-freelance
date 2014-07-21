@@ -76,7 +76,7 @@ section div > h3 {
             {{#work}}
             <h3>{{company}}</h3>
             <strong>{{position}}</strong>
-            <p>{{startDateYear}} - {{endDateYear}}</p>
+            <p>{{startDateYear}} {{endDateYear}}</p>
             <p>{{summary}}</p>
             <ul>
               {{#highlights}}

@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-modern-freelance",
-  "version": "0.1.6",
+  "version": "0.1.9",
   "description": "Default modern theme with additional sections including freelance work",
   "main": "index.js",
   "scripts": {
