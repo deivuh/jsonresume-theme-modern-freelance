@@ -124,7 +124,7 @@
               <li>{{.}}</li>
               {{/highlights}}
             </ul>
-            <p><a href="{{website}}">website</p>
+            <p><a href="{{website}}">website</a></p>
             <hr />{{/personalProjects}}
           </div>
         </div>
